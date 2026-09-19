@@ -1,5 +1,11 @@
 #Список из чисел
-numbers_list = [5, 3, 4, 5, 2, 4]
+numbers_list = []
+
+while True:
+    numbers = input("Введите цифр или (стоп): ")
+    if numbers.lower() == "стоп":
+        break
+    numbers_list.append(int(numbers))
 
 #Сумма
 def sum(numbers_list):
