@@ -1,25 +1,39 @@
 #Список из чисел
 numbers_list = [5, 3, 4, 5, 2, 4]
+
 #Сумма
-summ = 0
-for i in numbers_list:
-    summ += i
-print(summ)
+def sum(numbers_list):
+    summ = 0
+    for i in numbers_list:
+        summ += i
+    return summ
+total_sum = sum(numbers_list)
 
 #Среднее число
-average = summ/2
-print(float(average))
+def aver(summ,numbers_list):
+    average = summ/ len(numbers_list)
+    return average
+mid_num = aver(total_sum, numbers_list)
 
-#Подсчет двоек
-count_two = 0
-for i in numbers_list:
-    if i == 2:
-        count_two +=1
-print(count_two)
+#Сколько двоек
+def count():
+    count_two = 0
+    for i in numbers_list:
+        if i == 2:
+            count_two +=1
+    return count_two
+count_num = count()
 
 #Максимум
-maxim = 0
-for i in numbers_list:
-    if i > maxim:
-        maxim = i
-print(maxim)
+def max():
+    maxim = 0
+    for i in numbers_list:
+        if i > maxim:
+            maxim = i
+    return maxim
+max_num = max()
+
+#Вывод
+print(f"Среднее число: {float(mid_num)}")
+print(f"Cколько двоек: {count_num}")
+print(f"Mаксимум: {max_num}")
