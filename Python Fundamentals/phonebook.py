@@ -12,7 +12,13 @@ phonebook = {"Вадим" : "+7 937 395 94 60"}
 while True:
     action = menu()
     #Добавить/обновить
-    if action.lower() == "добавить" or action.lower() == "обновить":
+    if action.lower() == "добавить":
+        name = input("Введите имя: ")
+        number = input("Введите номер: ")
+        phonebook[name] = number
+        print(phonebook)
+    elif action.lower() == "обновить":
+        print(phonebook)
         name = input("Введите имя: ")
         number = input("Введите номер: ")
         phonebook[name] = number
