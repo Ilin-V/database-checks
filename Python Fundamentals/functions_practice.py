@@ -6,9 +6,9 @@ def is_even(n: int) -> bool:
         return False
 #2 функция
 def clamp(x, low, high):
-    if x <low:
+    if x < low:
         return low
-    elif x>low:
+    elif x > high:
         return high
     else:
         return x
