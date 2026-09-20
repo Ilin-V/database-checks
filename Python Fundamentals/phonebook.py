@@ -1,9 +1,9 @@
 #Меню
 def menu():
-    print("Добавить / обновить")
-    print("Найти по имени")
-    print("Показать все")
-    print("Выход")
+    print("добавить / обновить")
+    print("найти по имени")
+    print("показать все")
+    print("выход")
     action = input("Что хотите выбрать: ")
     return action
 #Словарь
@@ -24,19 +24,19 @@ while True:
         phonebook[name] = number
         print(phonebook)
     #Найти по имени
-    if action.lower() == "найти по имени" or action.lower() == "найти":
+    elif action.lower() == "найти по имени" or action.lower() == "найти":
         print(phonebook)
         name = input("Чей номер хотите найти?: ")
         if name in phonebook:
-            name = phonebook[name]
+            phone = phonebook[name]
             print(name)
         else:
             print("Контакта нет")
     #Показать все
-    if action.lower() == "показать все" or action.lower() == "показать":
+    elif action.lower() == "показать все" or action.lower() == "показать":
         print(phonebook)
     #Выход
-    if action.lower() == "выход":
+    elif action.lower() == "выход":
         print("Вы вышли!")
         break
     print()
