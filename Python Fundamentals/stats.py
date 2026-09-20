@@ -3,7 +3,7 @@ def count_letters(text: str) -> dict:
     dictionary = {}
     for i in text:
         letter = i.lower()
-        if letter.lower().isalpha():
+        if letter.isalpha():
             if letter not in dictionary:
                 dictionary[i.lower()] = 1
             else :
